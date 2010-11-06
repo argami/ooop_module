@@ -1,0 +1,3 @@
+[submodule "ooop"]
+	path = ooop
+	url = git@github.com:lasarux/ooop.git
