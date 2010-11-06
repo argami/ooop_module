@@ -7,18 +7,18 @@ the ORM.
 
 *** Advantages ***
 
-1- Less code in the functions
-2- Easy to read 
-3- You can test the code outside of the openerp
+1. Less code in the functions
+2. Easy to read 
+3. You can test the code outside of the openerp
 
 
 How to install?
 ---------------------------
 
-1- Install the [OOOP](http://github.com/lasarux/ooop)
-2- Clone the repository on your openerp addons folder
-3- Update you addons list in your openerp
-4- Install the module
+1. Install the [OOOP](http://github.com/lasarux/ooop)
+2. Clone the repository on your openerp addons folder
+3. Update you addons list in your openerp
+4. Install the module
 
 How to use?
 --------------------
