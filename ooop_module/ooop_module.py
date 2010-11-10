@@ -20,6 +20,8 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ########################################################################
+from __future__ import nested_scopes
+import new
 
 from osv import osv, fields
 from ooop import OOOP
@@ -34,3 +36,19 @@ class impulzia_ooop(osv.osv_memory):
     
 
 impulzia_ooop()
+
+
+def add_ooop(cls):
+    def ooop(self, cr, uid):
+        if not self.__dict__.has_key('_ooop'):
+            self._ooop = OOOP(parent=self, cr=cr, uid=uid)
+        return self._ooop
+            
+    ooop.__doc__ = "set ooop funtion to call self.ooop(cr, cursor)" 
+    ooop.__name__ = "ooop"
+    setattr(cls,ooop.__name__,ooop)
+
+
+
+
+add_ooop(osv.osv_base)

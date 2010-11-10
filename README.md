@@ -36,6 +36,22 @@ def test(self, cr, uid, ids, context=None):
     	print i.name <http://i.name> <http://i.name>
 </code></pre>
 
+***NEW*****
+
+Important to now that you can keep using the previous way but
+there is a new way to call it
+
+<pre><code>
+def test(self, cr, uid, ids, context=None):
+	#here its the magic you can get the ooop
+	o = self.ooop(cr, uid) 
+	#start the fun
+	x = o.ResPartner.all()
+	for i in x:
+    	print i.name <http://i.name> <http://i.name>
+</code></pre>
+
+
 How to use OOOP?
 --------------------
 
